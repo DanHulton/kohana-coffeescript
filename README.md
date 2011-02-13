@@ -12,7 +12,7 @@
 
 However, working with CoffeeScript requires you compile into javascript before it is executable in the browser.  This module will compile and minify CoffeeScript files at runtime and cache the results so you don't have to worry about adding this step to your deploy and deploy testing.
 
-Bonus benefit: You can add regular JavaScript files to the compilaion, turning all your application and module code into one minified .js file.
+Bonus benefit: You can add regular JavaScript files to the compilation, turning all your application and module code into one minified .js file.
 
 ## Requirements & Installation
 
