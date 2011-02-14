@@ -3,7 +3,7 @@
 /**
  * Compiles CoffeeScript files into one JavaScript file, optionally minifying it.
  */
-class CsCompile_Core {
+class CoffeeScript_Core {
 	// The formats that compile can return.
 	const FORMAT_TAG 		= 'tag';
 	const FORMAT_FILENAME	= 'filename';
@@ -21,7 +21,7 @@ class CsCompile_Core {
 		$compiled = "";
 		
         // Load config file
-        $config = Kohana::config('cscompile');
+        $config = Kohana::config('coffeescript');
         
         // If no files to compile, no tag necessary
         if (empty($files)) {
@@ -106,7 +106,7 @@ class CsCompile_Core {
 	 * @return string
 	 */
 	protected static function coffee_compile($file) {
-		exec(__(Kohana::config('cscompile.command'), array(':src' => $file)), $output);
+		exec(__(Kohana::config('coffeescript.command'), array(':src' => $file)), $output);
 		
 		// First line is wrapper only on successful compile
 		if ("(function() {" !== $output[0]) {

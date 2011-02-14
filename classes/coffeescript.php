@@ -1,3 +1,3 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class CsCompile extends CsCompile_Core { }
+class CoffeeScript extends CoffeeScript_Core { }
