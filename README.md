@@ -1,9 +1,9 @@
-# CsCompile
+# CoffeeScript
 
 *CoffeeScript compiler*
 
 - **Module Version:** 1.0.0
-- **Module URL:** <http://github.com/DanHulton/kohana-cscompile>
+- **Module URL:** <http://github.com/DanHulton/kohana-coffeescript>
 - **Compatible Kohana Version(s):** 3.1.x
 
 ## Description
@@ -18,7 +18,7 @@ Bonus benefit: You can add regular JavaScript files to the compilation, turning 
 
 1. Set up a command-line CoffeeScript compiler (see below for details).
 2. Download or clone this repository to your Kohana modules directory.
-3. Modify the "command" argument in config/cscompile.php to match your commind-line CoffeeScript compiler. 
+3. Modify the "command" argument in config/coffeescript.php to match your commind-line CoffeeScript compiler. 
 4. Enable the module in your 'bootstrap.php' file.
 5. Compile scripts directly into a template variable or a view.
 
@@ -38,7 +38,7 @@ Bonus benefit: You can add regular JavaScript files to the compilation, turning 
 
 	public function action_index() {
 		$this->response->body(View::factory('example', array(
-			'scripts' => CsCompile::compile(array(
+			'scripts' => CoffeeScript::compile(array(
 				APPPATH . 'js/jquery-autocomplete-plugin.js',
 				APPPATH . 'js/sample.coffee'
 			))
@@ -49,10 +49,10 @@ Bonus benefit: You can add regular JavaScript files to the compilation, turning 
 
 If you use head.js or another javascript loader that requires you pass the name of the javascript file instead of creating a link directly into the document, you can simply pass an extra variable to compile(), like so:
 
-	CsCompile::compile(array(
+	CoffeeScript::compile(array(
 		APPPATH . 'js/jquery-autocomplete-plugin.js',
 		APPPATH . 'js/sample.coffee'
-	), CsCompile::FORMAT_FILENAME);
+	), CoffeeScript::FORMAT_FILENAME);
 	
 Which returns:
 

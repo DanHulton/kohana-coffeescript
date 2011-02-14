@@ -1,10 +1,10 @@
 <?php defined('SYSPATH') OR die('No direct access allowed.');
 
-$cscompile_path = Kohana::config('cscompile.path');
+$cs_path = Kohana::config('CoffeeScript.path');
 
-if ( ! is_writable($cscompile_path)) {
+if ( ! is_writable($cs_path)) {
     throw new Kohana_Exception('Directory :dir must be writable.',
-        array(':dir' => Debug::path($cscompile_path)));
+        array(':dir' => Debug::path($cs_path)));
 }
 
 require_once 'vendor/jsmin.php';
